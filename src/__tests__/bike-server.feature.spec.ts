@@ -1,5 +1,10 @@
 import 'jest'
 import fetch from 'node-fetch'
+import {start as serverStart, stop as serverStop} from '../bike-server'
+
+beforeAll(() => serverStart())
+
+afterAll(() => serverStop())
 
 it('returns a bike if it has been added before', async () => {
     const bike = {
