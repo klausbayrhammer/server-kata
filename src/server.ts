@@ -3,7 +3,7 @@ import {getAllBikes} from "./controller"
 
 const server: fastify.FastifyInstance = fastify({})
 
-export async function start() {
+export async function start(): Promise<string> {
     server.get('/bikes/', async () => {
         return getAllBikes()
     })
@@ -11,6 +11,6 @@ export async function start() {
     return server.listen(3000)
 }
 
-export function stop() {
+export function stop(): Promise<void> {
     return server.close()
 }
