@@ -1,6 +1,6 @@
 import 'jest'
 import fetch from 'node-fetch'
-import {start as serverStart, stop as serverStop} from '../bike-server'
+import {start as serverStart, stop as serverStop} from '../server'
 import {Bike, Color, FrameSize} from "../bike.interface";
 
 beforeAll(() => serverStart())

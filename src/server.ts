@@ -1,5 +1,5 @@
 import * as fastify from 'fastify'
-import {getAllBikes} from "./bike-controller"
+import {getAllBikes} from "./controller"
 
 const server: fastify.FastifyInstance = fastify({})
 

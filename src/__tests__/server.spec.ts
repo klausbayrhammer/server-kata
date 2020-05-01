@@ -1,9 +1,9 @@
 import 'jest'
 import fetch from 'node-fetch'
-import {start as serverStart, stop as serverStop} from '../bike-server'
-import {getAllBikes} from '../bike-controller'
+import {start as serverStart, stop as serverStop} from '../server'
+import {getAllBikes} from '../controller'
 
-jest.mock('../bike-controller')
+jest.mock('../controller')
 
 beforeAll(() => serverStart())
 
