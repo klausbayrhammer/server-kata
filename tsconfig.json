@@ -2,6 +2,14 @@
   "compilerOptions": {
     "types": [
       "node"
-    ]
-  }
+    ],
+    "strict": true,
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es2019",
+    "outDir": "dist"
+  },
+  "include": [
+    "./src/**/*"
+  ]
 }
