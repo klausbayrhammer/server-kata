@@ -12,7 +12,9 @@ it('returns a bike if it has been added before', async () => {
         color: Color.RED,
         frameSize: FrameSize.XXL
     }
-    await fetch('http://localhost:3000/bike/', { method: 'POST', body: JSON.stringify(bike)})
+    const responseCreatingBikes = await fetch('http://localhost:3000/bike/', { method: 'POST', body: JSON.stringify(bike)})
+
+    expect(responseCreatingBikes.status).toEqual(200)
 
     const allBikes = await(await fetch('http://localhost:3000/bikes/')).json()
 
