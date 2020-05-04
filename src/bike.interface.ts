@@ -4,15 +4,15 @@ export interface Bike {
 }
 
 export enum Color {
-    RED,
-    GREEN,
-    BLUE
+    RED = "RED",
+    GREEN = "GREEN",
+    BLUE = "BLUE"
 }
 
 export enum FrameSize {
-    S,
-    M,
-    L,
-    XL,
-    XXL
+    S = "S",
+    M = "M",
+    L = "L",
+    XL = "XL",
+    XXL = "XXL"
 }

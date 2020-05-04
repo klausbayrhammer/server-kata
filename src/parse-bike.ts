@@ -1,6 +1,15 @@
 import {Bike} from "./bike.interface"
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default function parseBike(bikeInput: string): Bike {
-    throw new Error('not implemented')
+    const {color, frameSize} = JSON.parse(bikeInput)
+    if(!color) {
+        throw new Error('Property color missing')
+    }
+    if(!frameSize) {
+        throw new Error('Property framesize missing')
+    }
+    return {
+        color,
+        frameSize
+    }
 }
