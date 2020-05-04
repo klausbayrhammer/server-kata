@@ -18,5 +18,5 @@ it('returns a bike if it has been added before', async () => {
 
     const allBikes = await(await fetch('http://localhost:3000/bikes/')).json()
 
-    expect(allBikes).toContain(bike)
+    expect(allBikes).toEqual([bike])
 })

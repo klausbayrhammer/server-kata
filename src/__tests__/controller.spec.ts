@@ -1,6 +1,6 @@
 import 'jest'
-import {createNewBike} from '../dao'
-import {createBike} from "../controller"
+import * as dao from '../dao'
+import {createBike, getAllBikes} from "../controller"
 import {Bike, Color, FrameSize} from "../bike.interface"
 
 jest.mock('../dao')
@@ -11,5 +11,10 @@ it('forwards creation of new bikes to the bikeDao', () => {
         frameSize: FrameSize.XXL
     }
     createBike(bike)
-    expect(createNewBike).toBeCalledWith(bike)
+    expect(dao.createNewBike).toBeCalledWith(bike)
+})
+
+it('returns all bikes for getAllBikes', function () {
+    (dao.getAllBikes as jest.Mock).mockReturnValue('bikes')
+    expect(getAllBikes()).toEqual('bikes')
 })
