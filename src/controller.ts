@@ -1,8 +1,8 @@
 import {Bike} from "./bike.interface"
+import {createNewBike} from "./dao"
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function createBike(bike: Bike): void {
-    throw new Error('not implemented')
+    createNewBike(bike)
 }
 
 
