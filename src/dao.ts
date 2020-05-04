@@ -1,6 +1,12 @@
 import {Bike} from "./bike.interface"
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const bikes: Bike[] = []
+
+export function getAllBikes(): Bike[] {
+    return bikes
+}
+
+
 export function createNewBike(bike: Bike): void {
-    throw new Error('not implemented')
+    bikes.push(bike)
 }
