@@ -1,4 +1,4 @@
-import * as fastify from 'fastify'
+import * as fastify from "fastify"
 import registerRoutes from "./routes"
 
 const server: fastify.FastifyInstance = fastify({})
