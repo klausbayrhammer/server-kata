@@ -8,10 +8,8 @@ beforeAll(() => serverStart())
 afterAll(() => serverStop())
 
 it("returns a bike if it has been added before", async () => {
-    const bike: Bike = {
-        color: Color.RED,
-        frameSize: FrameSize.XXL
-    }
+    const bike = new Bike(Color.RED, FrameSize.XXL)
+    
     const responseCreatingBikes = await fetch("http://localhost:3000/bike/", { method: "POST", body: JSON.stringify(bike)})
 
     expect(responseCreatingBikes.status).toEqual(200)

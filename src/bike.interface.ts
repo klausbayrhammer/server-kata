@@ -1,6 +1,5 @@
-export interface Bike {
-    color: Color;
-    frameSize: FrameSize;
+export class Bike {
+    constructor(public color: Color, public frameSize: FrameSize) {}
 }
 
 export enum Color {

@@ -4,10 +4,7 @@ import parseBike from "../parse-bike"
 import {Bike, Color, FrameSize} from "../bike.interface"
 
 it("parses a complete bike correctly", () => {
-    const bike: Bike = {
-        color: Color.RED,
-        frameSize: FrameSize.XXL
-    }
+    const bike = new Bike(Color.RED, FrameSize.XXL)
 
     const parsedBike = parseBike(JSON.stringify(bike))
 

@@ -30,10 +30,7 @@ describe("create new bike", () => {
     })
 
     it("creates a new bike successfully", async () => {
-        const bike: Bike = {
-            color: Color.RED,
-            frameSize: FrameSize.XXL
-        };
+        const bike = new Bike(Color.RED, FrameSize.XXL);
 
         (parseBike as jest.Mock).mockReturnValue(bike)
 
