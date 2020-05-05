@@ -1,5 +1,3 @@
-import "jest"
-
 import parseBike from "../parse-bike"
 import {Bike, Color, FrameSize} from "../bike.interface"
 

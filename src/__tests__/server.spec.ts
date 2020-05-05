@@ -1,4 +1,3 @@
-import "jest"
 import fetch from "node-fetch"
 import {start as serverStart, stop as serverStop} from "../server"
 import {getAllBikes, createBike} from "../controller"

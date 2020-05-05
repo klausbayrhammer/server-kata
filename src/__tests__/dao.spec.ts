@@ -1,4 +1,3 @@
-import "jest"
 import {createNewBike, getAllBikes} from "../dao"
 import {Bike, Color, FrameSize} from "../bike.interface"
 

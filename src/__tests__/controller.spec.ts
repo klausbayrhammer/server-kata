@@ -1,4 +1,3 @@
-import "jest"
 import * as dao from "../dao"
 import {createBike, getAllBikes} from "../controller"
 import {Bike, Color, FrameSize} from "../bike.interface"
